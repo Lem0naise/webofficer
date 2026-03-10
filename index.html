@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VOTE 4 INDY 4 ECSS WEB OFFICER!!!!!!</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+    * {
+      font-family: "Comic Sans MS", "Comic Neue", cursive, sans-serif;
+    }
+
+    body {
+      background-color: #ff00ff;
+      background-image:
+        repeating-linear-gradient(
+          45deg,
+          #ff00ff 0px, #ff00ff 10px,
+          #00ffff 10px, #00ffff 20px
+        );
+      margin: 0;
+      padding: 10px;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    /* ===== VISITOR COUNTER ===== */
+    #visitor-bar {
+      background: #000080;
+      color: #ffff00;
+      font-size: 12px;
+      padding: 3px;
+      border: 2px outset #ffffff;
+    }
+
+    /* ===== WORDART TITLE ===== */
+    h1.wordart {
+      font-size: 64px;
+      font-weight: 900;
+      background: linear-gradient(
+        to bottom,
+        #ff0000 0%,
+        #ff7700 15%,
+        #ffff00 30%,
+        #00ff00 45%,
+        #0000ff 60%,
+        #8b00ff 75%,
+        #ff00ff 90%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: none;
+      filter: drop-shadow(4px 4px 0px #000000);
+      transform: skewX(-10deg) scaleY(1.3);
+      display: inline-block;
+      margin: 10px 0;
+      -webkit-text-stroke: 2px black;
+    }
+
+    /* ===== MARQUEE ===== */
+    marquee {
+      background: #000000;
+      color: #00ff00;
+      font-size: 18px;
+      padding: 5px;
+      border: 3px dashed #ff0000;
+      font-weight: bold;
+    }
+
+    /* ===== MAIN CONTAINER ===== */
+    .main-table {
+      background: #ffffff;
+      border: 6px ridge #ff0000;
+      padding: 15px;
+      margin: 10px auto;
+      max-width: 900px;
+    }
+
+    /* ===== BLINK ===== */
+    .blink {
+      animation: blinker 0.6s step-start infinite;
+      color: #ff0000;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    @keyframes blinker {
+      50% { opacity: 0; }
+    }
+
+    /* ===== UNDER CONSTRUCTION ===== */
+    .under-construction {
+      background: #ffff00;
+      border: 4px dashed #ff6600;
+      padding: 8px;
+      font-size: 20px;
+      color: #cc0000;
+      font-weight: bold;
+      margin: 8px 0;
+    }
+
+    /* ===== CANDIDATE PHOTO PLACEHOLDER ===== */
+    .photo-box {
+      width: 180px;
+      height: 200px;
+      background: linear-gradient(135deg, #ff69b4, #00ffff);
+      border: 8px outset #888888;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin: 10px;
+      color: #000080;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .photo-box .emoji-face {
+      font-size: 80px;
+      line-height: 1;
+    }
+
+    /* ===== SECTION HEADERS ===== */
+    h2 {
+      background: #000080;
+      color: #ffff00;
+      padding: 6px 12px;
+      border: 4px outset #0000ff;
+      display: inline-block;
+      font-size: 26px;
+      text-decoration: underline;
+      text-decoration-style: wavy;
+      text-decoration-color: #ff0000;
+      margin-top: 20px;
+    }
+
+    /* ===== REASONS LIST ===== */
+    ul.reasons {
+      text-align: left;
+      background: #fffacd;
+      border: 3px solid #ff6600;
+      padding: 10px 10px 10px 30px;
+      margin: 10px auto;
+      max-width: 600px;
+      font-size: 18px;
+      color: #000080;
+    }
+    ul.reasons li {
+      margin: 6px 0;
+    }
+    ul.reasons li::marker {
+      content: "★ ";
+      color: #ff0000;
+      font-size: 20px;
+    }
+
+    /* ===== SPINNING TEXT ===== */
+    .spin {
+      display: inline-block;
+      animation: spinner 3s linear infinite;
+      font-size: 40px;
+    }
+    @keyframes spinner {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    /* ===== POLICY BOXES ===== */
+    .policy-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 10px 0;
+    }
+    .policy-box {
+      background: #ff99cc;
+      border: 4px outset #cc0066;
+      padding: 10px;
+      width: 180px;
+      font-size: 14px;
+      color: #000000;
+      font-weight: bold;
+    }
+    .policy-box h3 {
+      margin: 0 0 6px 0;
+      color: #000080;
+      font-size: 16px;
+      text-decoration: underline;
+    }
+
+    /* ===== VOTE BUTTON ===== */
+    .vote-btn {
+      background: linear-gradient(to bottom, #ff0000, #cc0000);
+      color: #ffff00;
+      font-size: 32px;
+      font-weight: bold;
+      font-family: "Comic Sans MS", cursive;
+      padding: 15px 40px;
+      border: 6px outset #ff6666;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin: 15px;
+      animation: pulse 1s ease-in-out infinite;
+      text-shadow: 2px 2px 0px #000000;
+    }
+    .vote-btn:hover {
+      background: linear-gradient(to bottom, #ffff00, #ff9900);
+      color: #ff0000;
+      border-style: inset;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.07); }
+    }
+
+    /* ===== TESTIMONIALS ===== */
+    .testimonial {
+      background: #ccffcc;
+      border-left: 8px solid #00aa00;
+      margin: 8px auto;
+      padding: 8px 12px;
+      text-align: left;
+      max-width: 500px;
+      font-style: italic;
+      color: #003300;
+      font-size: 15px;
+    }
+    .testimonial .who {
+      font-style: normal;
+      font-weight: bold;
+      color: #006600;
+      font-size: 13px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #000000;
+      color: #00ff00;
+      padding: 10px;
+      font-size: 12px;
+      margin-top: 15px;
+      border-top: 4px dashed #ff0000;
+    }
+    footer a {
+      color: #00ffff;
+    }
+
+    /* ===== RAINBOW HR ===== */
+    hr.rainbow {
+      border: none;
+      height: 6px;
+      background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+      margin: 12px 0;
+    }
+
+    /* ===== GUESTBOOK ===== */
+    .guestbook-form {
+      background: #e0e0ff;
+      border: 3px inset #9999ff;
+      padding: 10px;
+      margin: 10px auto;
+      max-width: 480px;
+      text-align: left;
+    }
+    .guestbook-form label {
+      font-weight: bold;
+      color: #000080;
+      font-size: 14px;
+    }
+    .guestbook-form input,
+    .guestbook-form textarea {
+      width: 100%;
+      font-family: "Comic Sans MS", cursive;
+      font-size: 14px;
+      border: 2px inset #9999ff;
+      background: #ffffff;
+      color: #000000;
+      box-sizing: border-box;
+      margin-bottom: 6px;
+      padding: 4px;
+    }
+    .guestbook-form button {
+      background: #000080;
+      color: #ffffff;
+      font-family: "Comic Sans MS", cursive;
+      font-size: 16px;
+      border: 3px outset #0000ff;
+      padding: 5px 15px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .guestbook-form button:active {
+      border-style: inset;
+    }
+    #entries {
+      max-width: 480px;
+      margin: 8px auto;
+      text-align: left;
+    }
+    .entry {
+      background: #fffde0;
+      border: 2px solid #ccaa00;
+      padding: 6px 10px;
+      margin: 5px 0;
+      font-size: 14px;
+    }
+    .entry strong {
+      color: #cc0000;
+    }
+
+    /* ===== HIT COUNTER ===== */
+    #counter {
+      font-size: 28px;
+      font-family: "Courier New", monospace;
+      color: #00ff00;
+      background: #000000;
+      padding: 2px 8px;
+      border: 3px inset #444444;
+      letter-spacing: 4px;
+    }
+
+    /* ===== CURSOR SPARKLES ===== */
+    .sparkle {
+      position: fixed;
+      pointer-events: none;
+      font-size: 20px;
+      animation: sparkle-fade 0.8s ease-out forwards;
+      z-index: 9999;
+    }
+    @keyframes sparkle-fade {
+      0% { opacity: 1; transform: translateY(0) scale(1); }
+      100% { opacity: 0; transform: translateY(-40px) scale(0.2); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- VISITOR COUNTER BAR -->
+  <div id="visitor-bar">
+    You are visitor number: <span id="counter">0069420</span> &nbsp;|&nbsp;
+    Best viewed in Internet Explorer 6 at 800x600 &nbsp;|&nbsp;
+    <span class="blink">UNDER CONSTRUCTION</span>
+  </div>
+
+  <!-- MARQUEE -->
+  <marquee scrollamount="6">
+    *** VOTE INDY 4 ECSS WEB OFFICER 2025 *** WEB DESIGN IS MY PASSION ***
+    SOUTHAMPTON UNI'S #1 WEBSITE MAKER *** TRUST ME I KNOW HTML ***
+    *** CLICK THE VOTE BUTTON PLEASE *** MY MUM SAYS I'M GOOD AT COMPUTERS ***
+  </marquee>
+
+  <div class="main-table">
+
+    <!-- WORDART TITLE -->
+    <h1 class="wordart">INDY 4 WEB OFFICER</h1>
+
+    <div class="under-construction">
+      !!! THIS WEBSITE IS UNDER CONSTRUCTION !!!
+      &nbsp;&nbsp; &#9888; BEST VIEWED ON NETSCAPE NAVIGATOR &#9888;
+    </div>
+
+    <hr class="rainbow">
+
+    <!-- INTRO -->
+    <div style="display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:20px; margin:10px 0;">
+      <div class="photo-box">
+        <div class="emoji-face">&#129489;&#8205;&#128187;</div>
+        <div>this is me</div>
+        <div style="font-size:11px;">(artist's impression)</div>
+      </div>
+      <div style="max-width:420px; text-align:left; background:#ffffcc; border:4px dashed #ff9900; padding:12px; font-size:16px; color:#330000;">
+        <p>
+          Hiya!!!! My name is <strong style="color:#cc0000; font-size:20px;">INDY</strong>
+          and I am running for <strong>ECSS Web Officer</strong>!!!!!
+        </p>
+        <p>
+          I have been using the internet since I was like
+          <span style="color:#0000ff;">VERY YOUNG</span> so I am basically
+          an expert.&#128526;
+        </p>
+        <p>
+          I promise to make the ECSS website so good that people will
+          literally cry at how good it is. Maybe.
+        </p>
+        <p class="blink">PLEASE VOTE 4 ME!!!</p>
+      </div>
+    </div>
+
+    <hr class="rainbow">
+
+    <!-- WHY VOTE -->
+    <h2>&#10024; TOP 5 REASONS 2 VOTE 4 INDY &#10024;</h2>
+    <ul class="reasons">
+      <li>I know what a website is</li>
+      <li>I once used Dreamweaver for 15 minutes</li>
+      <li>I will make the buttons bigger (very important)</li>
+      <li>I will add a hit counter (already done, see top of page)</li>
+      <li>My other candidate has never even heard of marquee tags</li>
+    </ul>
+
+    <hr class="rainbow">
+
+    <!-- POLICIES -->
+    <h2>&#128203; MY POLICIES (very serious) &#128203;</h2>
+    <div class="policy-grid">
+      <div class="policy-box">
+        <h3>Better Fonts</h3>
+        Will switch the entire site to Comic Sans. Studies show* this increases
+        productivity by 200%.
+        <br><small>*source: trust me</small>
+      </div>
+      <div class="policy-box">
+        <h3>More GIFs</h3>
+        Every page will have at least one spinning globe GIF.
+        This is non-negotiable.
+      </div>
+      <div class="policy-box">
+        <h3>Dark Mode</h3>
+        Will implement dark mode. The background will be black.
+        The text will also be black. Very mysterious.
+      </div>
+      <div class="policy-box">
+        <h3>Web 3.0</h3>
+        Not sure what this is but I will definitely do it.
+        Sounds important and modern.
+      </div>
+      <div class="policy-box">
+        <h3>Accessibility</h3>
+        All images will have alt text that just says "image".
+        You're welcome, screen reader users.
+      </div>
+      <div class="policy-box">
+        <h3>SEO</h3>
+        Will put the word "website" 400 times in the footer
+        so Google knows it's a website.
+      </div>
+    </div>
+
+    <hr class="rainbow">
+
+    <!-- TESTIMONIALS -->
+    <h2>&#128172; What People Are Saying &#128172;</h2>
+
+    <div class="testimonial">
+      "Indy once explained to me what a hyperlink is. Changed my life forever."
+      <br><span class="who">— Someone from ECS, probably</span>
+    </div>
+    <div class="testimonial">
+      "I asked Indy to fix my CSS and they said 'have you tried turning it off and on again'.
+      It worked."
+      <br><span class="who">— A definitely real person</span>
+    </div>
+    <div class="testimonial">
+      "Very good at computers. 10/10 would elect again."
+      <br><span class="who">— Indy's mum</span>
+    </div>
+
+    <hr class="rainbow">
+
+    <!-- SKILLS METER -->
+    <h2>&#128187; My Sk1llz &#128187;</h2>
+    <div style="max-width:500px; margin:10px auto; text-align:left; font-size:15px; color:#000080;">
+
+      <div style="margin:6px 0;">
+        HTML: &nbsp;
+        <span style="background:lime; color:#000; padding:1px 4px; border:1px solid #006600; font-size:13px;">
+          &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608; 100%
+        </span>
+        (i made this page)
+      </div>
+
+      <div style="margin:6px 0;">
+        CSS: &nbsp;
+        <span style="background:lime; color:#000; padding:1px 4px; border:1px solid #006600; font-size:13px;">
+          &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608; 100%
+        </span>
+        (i made this page)
+      </div>
+
+      <div style="margin:6px 0;">
+        JavaScript: &nbsp;
+        <span style="background:yellow; color:#000; padding:1px 4px; border:1px solid #aaaa00; font-size:13px;">
+          &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&nbsp;&nbsp;&nbsp; 75%
+        </span>
+        (there's some on this page, it does stuff)
+      </div>
+
+      <div style="margin:6px 0;">
+        React: &nbsp;
+        <span style="background:orange; color:#000; padding:1px 4px; border:1px solid #aa6600; font-size:13px;">
+          &#9608;&#9608;&#9608;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 30%
+        </span>
+        (i have heard of it)
+      </div>
+
+      <div style="margin:6px 0;">
+        Web Design: &nbsp;
+        <span style="background:red; color:#fff; padding:1px 4px; border:1px solid #880000; font-size:13px;">
+          &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608;&#9608; 100%
+        </span>
+        <strong>(as you can see)</strong>
+      </div>
+
+    </div>
+
+    <hr class="rainbow">
+
+    <!-- GUESTBOOK -->
+    <h2>&#128221; Sign My Guestbook &#128221;</h2>
+    <p style="font-size:14px; color:#660000;">Leave a message of support!! (or else)</p>
+
+    <div class="guestbook-form">
+      <label>Your Name:</label><br>
+      <input type="text" id="gb-name" placeholder="e.g. Cool Person"><br>
+      <label>Message:</label><br>
+      <textarea id="gb-msg" rows="3" placeholder="write something nice!!!"></textarea><br>
+      <button onclick="addEntry()">Sign Guestbook !!!</button>
+    </div>
+    <div id="entries"></div>
+
+    <hr class="rainbow">
+
+    <!-- VOTE BUTTON -->
+    <div style="margin:20px 0;">
+      <p style="font-size:22px; color:#000080; font-weight:bold;">
+        OK so you've read all of this. Now do the right thing.
+      </p>
+      <a class="vote-btn" href="https://society.ecs.soton.ac.uk/elections" onclick="voted();" target="_blank">
+        &#10003; VOTE 4 INDY &#10003;
+      </a>
+      <p id="vote-msg" style="font-size:18px; color:#008800; font-weight:bold; min-height:28px;"></p>
+    </div>
+
+    <hr class="rainbow">
+
+    <!-- SPINNING THING -->
+    <div style="margin:10px 0;">
+      <span class="spin">&#127760;</span>
+      <span style="font-size:13px; color:#666666; display:block; margin-top:5px;">
+        (this globe is spinning to show that i am global and international)
+      </span>
+    </div>
+
+  </div><!-- end main-table -->
+
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2025 Indy 4 ECSS Web Officer &mdash; All Rights Reserved (please don't steal my website) &mdash;
+    Made with &#10084; and zero CSS frameworks &mdash;
+    Optimised for 56k modem &mdash;
+    <span style="color:#ffff00;">No cookies! No tracking! Just vibes!</span>
+    <br>
+    website &nbsp; website &nbsp; website &nbsp; website &nbsp; website &nbsp; website &nbsp; website &nbsp; website &nbsp; website &nbsp; website &nbsp; website &nbsp; website &nbsp; website
+  </footer>
+
+  <script>
+    // ===== HIT COUNTER (fake but fun) =====
+    (function() {
+      var stored = localStorage.getItem('hitCount');
+      var count = stored ? parseInt(stored, 10) : 69419;
+      count++;
+      localStorage.setItem('hitCount', count);
+      var s = String(count).padStart(7, '0');
+      document.getElementById('counter').textContent = s;
+    })();
+
+    // ===== GUESTBOOK =====
+    var defaultEntries = [
+      { name: "ECS Student", msg: "GO INDY!!!!! ily queen/king/liege" },
+      { name: "Anonymous", msg: "I cannot believe how good this website is. i am crying." },
+      { name: "Web Officer (outgoing)", msg: "please save us" }
+    ];
+
+    function loadEntries() {
+      var stored = localStorage.getItem('guestbook');
+      return stored ? JSON.parse(stored) : defaultEntries;
+    }
+
+    function saveEntries(entries) {
+      localStorage.setItem('guestbook', JSON.stringify(entries));
+    }
+
+    function renderEntries() {
+      var entries = loadEntries();
+      var container = document.getElementById('entries');
+      container.innerHTML = '';
+      entries.forEach(function(e) {
+        var div = document.createElement('div');
+        div.className = 'entry';
+        div.innerHTML = '<strong>' + escHtml(e.name) + '</strong> says: ' + escHtml(e.msg);
+        container.appendChild(div);
+      });
+    }
+
+    function escHtml(str) {
+      return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    }
+
+    function addEntry() {
+      var name = document.getElementById('gb-name').value.trim() || 'Anonymous';
+      var msg  = document.getElementById('gb-msg').value.trim();
+      if (!msg) { alert('please write something!!'); return; }
+      var entries = loadEntries();
+      entries.unshift({ name: name, msg: msg });
+      saveEntries(entries);
+      renderEntries();
+      document.getElementById('gb-name').value = '';
+      document.getElementById('gb-msg').value = '';
+    }
+
+    renderEntries();
+
+    // ===== VOTE BUTTON =====
+    var voteMessages = [
+      "THANK YOU!!! You have made the right choice. :-)",
+      "YAY!!!! You're literally the best person ever.",
+      "Your vote has been counted* (*not legally binding)",
+      "WOW. Amazing. Stunning. Brave. Thank you so much!!",
+      "You just secured 10 years of good luck. Probably.",
+    ];
+    var voteIdx = 0;
+    function voted() {
+      document.getElementById('vote-msg').textContent = voteMessages[voteIdx % voteMessages.length];
+      voteIdx++;
+    }
+
+    // ===== CURSOR SPARKLES =====
+    var sparkleChars = ['&#10024;','&#11088;','&#128171;','&#10052;','&#9733;','&#127774;'];
+    document.addEventListener('mousemove', function(e) {
+      if (Math.random() > 0.85) {
+        var el = document.createElement('span');
+        el.className = 'sparkle';
+        el.innerHTML = sparkleChars[Math.floor(Math.random() * sparkleChars.length)];
+        el.style.left = (e.clientX - 10) + 'px';
+        el.style.top  = (e.clientY - 10) + 'px';
+        document.body.appendChild(el);
+        setTimeout(function() { el.remove(); }, 800);
+      }
+    });
+  </script>
+
+</body>
+</html>
