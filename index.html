@@ -2,242 +2,87 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>VOTE 4 INDY!!!!!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indy Campaign Video</title>
   <style>
-    * { font-family: "Comic Sans MS", cursive; margin: 0; padding: 0; box-sizing: border-box; }
+
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Finger Paint" , sans-serif;
+    }
 
     body {
-      background: repeating-linear-gradient(45deg, #ff00ff 0px, #ff00ff 12px, #00ffff 12px, #00ffff 24px);
-      text-align: center;
-      padding: 10px;
-      overflow-x: hidden;
+      min-height: 100vh;
+      background: #111;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 24px;
+      font-size: 25px;
     }
 
-    marquee {
+    .container {
+      width: min(1200px, 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    video {
+      width: 100%;
+      max-height: 80vh;
+      border: 4px solid #fff;
       background: #000;
-      color: #00ff00;
-      font-size: 20px;
-      font-weight: bold;
-      padding: 6px;
-      border: 4px dashed #ff0000;
     }
 
-    h1 {
-      font-size: 80px;
-      font-weight: 900;
-      background: linear-gradient(to bottom, red, orange, yellow, lime, cyan, blue, violet);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      filter: drop-shadow(5px 5px 0 #000);
-      transform: skewX(-8deg) scaleY(1.4);
+    .actions {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .btn {
       display: inline-block;
-      margin: 10px 0;
-    }
-
-    .box {
-      background: #fff;
-      border: 6px ridge #ff0000;
-      padding: 16px;
-      margin: 10px auto;
-      max-width: 680px;
-    }
-
-    .blink { animation: b 0.5s step-start infinite; }
-    @keyframes b { 50% { opacity: 0; } }
-
-    hr { border: none; height: 6px; background: linear-gradient(to right, red,orange,yellow,lime,cyan,blue,violet); margin: 14px 0; }
-
-    ul {
-      text-align: left;
-      background: #ffffcc;
-      border: 3px solid #ff6600;
-      padding: 10px 10px 10px 24px;
-      margin: 10px auto;
-      max-width: 460px;
-      font-size: 20px;
-      color: #000080;
-      list-style: none;
-    }
-    ul li::before { content: "★ "; color: #ff0000; }
-    ul li { margin: 6px 0; }
-
-    .vote-btn {
-      display: inline-block;
-      background: linear-gradient(to bottom, #ff0000, #990000);
-      color: #ffff00;
-      font-size: 60px;
-      font-weight: bold;
-      font-family: "Comic Sans MS", cursive;
-      padding: 28px 70px;
-      border: 10px outset #ff8888;
-      cursor: pointer;
       text-decoration: none;
-      margin: 18px;
-      animation: pulse 0.7s ease-in-out infinite;
-      text-shadow: 4px 4px 0 #000;
-      letter-spacing: 3px;
-      width: 90%;
-      max-width: 560px;
-    }
-    .vote-btn:hover { background: linear-gradient(to bottom,#ffff00,#ff9900); color:#ff0000; border-style:inset; }
-    @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.06)} }
-
-    #vote-msg { font-size: 24px; color: #008800; font-weight: bold; min-height: 32px; margin: 6px 0; }
-
-    footer {
-      background: #000;
-      color: #0f0;
-      font-size: 12px;
-      padding: 8px;
-      margin-top: 10px;
-      border-top: 4px dashed #f00;
-    }
-
-    .sparkle { position:fixed; pointer-events:none; font-size:22px; animation:sf 0.8s ease-out forwards; z-index:9999; }
-    @keyframes sf { 0%{opacity:1;transform:translateY(0) scale(1)} 100%{opacity:0;transform:translateY(-50px) scale(0.1)} }
-
-    .bubble-orbit {
-      position: fixed;
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      overflow: hidden;
-      z-index: 1000;
-      pointer-events: none;
-      top: calc(50% - 45px);
-      left: calc(50% - 45px);
-      box-shadow: 0 0 0 4px #ff00ff, 0 0 0 7px #00ffff, 0 6px 18px rgba(0,0,0,0.4);
-      animation: orbit 7s linear infinite;
-    }
-    .bubble-orbit img { width: 100%; height: 100%; object-fit: cover; }
-    @keyframes orbit {
-      from { transform: rotate(0deg)   translateX(260px) rotate(0deg); }
-      to   { transform: rotate(360deg) translateX(260px) rotate(-360deg); }
-    }
-
-    .calm-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 99999;
-      background: #000080;
-      color: #ffffff;
-      font-size: 18px;
-      font-weight: bold;
-      font-family: "Comic Sans MS", cursive;
       padding: 14px 20px;
-      border: 5px outset #aaaaff;
-      cursor: pointer;
-      max-width: 200px;
-      line-height: 1.3;
+      border-radius: 8px;
+      font-weight: 700;
+      text-align: center;
+      min-width: 220px;
     }
-    .calm-btn:hover { background: #0000cc; border-style: inset; }
 
-    body.calm {
-      background: #e8e8e8 !important;
+    .btn-vote {
+      background: #e11d48;
+      color: #fff;
+      font-size: 40px;
     }
-    body.calm .bubble-orbit { display: none; }
-    body.calm .blink { animation: none !important; opacity: 1; }
-    body.calm .vote-btn { animation: none !important; }
+
+    .btn-work {
+      background: #2563eb;
+      color: #fff;
+    }
   </style>
 </head>
 <body>
+  <main class="container">
 
-<div class="bubble-orbit"><img src="webofficer.jpeg" alt="webofficer"></div>
+    warning flashing lights
+    <video controls>
+      <source src="ecssnew.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
 
-<button class="calm-btn" id="calm-btn" onclick="toggleCalm()">STOP THE CHAOS (accessibility mode)</button>
-<marquee scrollamount="9">★★★ VOTE INDY 4 ECSS WEB OFFICER ★★★ WEB DESIGN IS MY PASSION ★★★ I KNOW WHAT A WEBSITE IS ★★★ PLEASE ★★★ MY MUM SAYS IM GOOD AT COMPUTERS ★★★</marquee>
-
-<div class="box">
-
-  <h1>INDY 4<br>WEB OFFICER</h1>
-
-  <p style="font-size:13px; color:#999;">
-    <span class="blink" style="color:#ff0000; font-size:16px; font-weight:bold;">⚠ UNDER CONSTRUCTION ⚠</span>
-    &nbsp;|&nbsp; you are visitor number
-    <strong style="font-family:monospace; color:#cc0000; font-size:16px;" id="ctr">293939</strong>
-    &nbsp;|&nbsp; best viewed in internet explorer 6
-  </p>
-
-  <hr>
-
-  <p style="font-size:21px; color:#000080; background:#fffacd; border:3px dashed #ff6600; padding:14px; margin:10px 0; line-height:1.6;">
-    hi!!!! i am <strong style="color:#cc0000; font-size:32px;">INDY</strong> and i want to be
-    <strong>ECSS Web Officer</strong>.<br>
-    i made this website. as you can see<br>
-    <strong style="color:#0000aa;">web design is my passion.</strong>
-    <br><span style="font-size:15px; color:#666;">(please vote for me)</span>
-  </p>
-
-  <hr>
-
-  <p style="font-size:22px; font-weight:bold; color:#000080; margin-bottom:6px;">why you should vote 4 me:</p>
-  <ul>
-    <li>i know what html is</li>
-    <li>i will make the buttons bigger</li>
-    <li>my mum always asks me for help with her computer</li>
-    <li>who else has heard of &lt;marquee&gt;</li>
-  </ul>
-
-  <hr>
-
-  <p style="font-size:20px; font-weight:bold; color:#cc0000; margin-bottom:4px;">ok. you've seen enough. do the right thing.</p>
-
-  <a class="vote-btn" href="https://society.ecs.soton.ac.uk/elections" target="_blank" onclick="voted();">✔ VOTE 4 INDY ✔</a>
-  <div id="vote-msg"></div>
-
-  <hr>
-
-  <a style="font-size:20px; color:#444444;" href="https://indigo.spot">
-    © indy 4 ecss web officer 2026. if you want to see my actual work click here
-  </a>
-
-</div>
-
-<script>
-  var n = parseInt(localStorage.getItem('hits')||'6283')+1;
-  localStorage.setItem('hits',n);
-  document.getElementById('ctr').textContent = String(n).padStart(7,'0');
-
-  var msgs = [
-    "YESSS!!!! thank you so much oh my god",
-    "you are literally the best person alive",
-    "vote registered* (*not legally binding)",
-    "WOW. stunning. brave. incredible. wow.",
-    "ok you can stop clicking it now. thank you.",
-    "every click counts. please keep going.",
-  ];
-  var i = 0;
-  function voted(){ document.getElementById('vote-msg').textContent = msgs[i++ % msgs.length]; }
-
-  var calm = false;
-  var marqueeEl = document.querySelector('marquee');
-
-  function toggleCalm() {
-    calm = !calm;
-    document.body.classList.toggle('calm', calm);
-    document.getElementById('calm-btn').textContent = calm
-      ? 'RESUME THE CHAOS'
-      : 'STOP THE CHAOS (accessibility mode)';
-    if (calm) {
-      marqueeEl.stop();
-    } else {
-      marqueeEl.start();
-    }
-  }
-
-  document.addEventListener('mousemove',function(e){
-    if(calm) return;
-    if(Math.random()>0.82){
-      var s=document.createElement('span');
-      s.className='sparkle';
-      s.innerHTML=['&#10024;','&#11088;','&#9733;','&#10052;'][Math.floor(Math.random()*4)];
-      s.style.cssText='left:'+(e.clientX-10)+'px;top:'+(e.clientY-10)+'px';
-      document.body.appendChild(s);
-      setTimeout(()=>s.remove(),800);
-    }
-  });
-</script>
+    <div class="actions">
+      <a class="btn btn-vote" href="https://society.ecs.soton.ac.uk/elections" target="_blank" rel="noopener noreferrer">Vote for Indy</a>
+      <a class="btn btn-work" href="https://indigo.spot" target="_blank" rel="noopener noreferrer">View My Actual Work</a>
+    </div>
+  </main>
 </body>
 </html>
