@@ -80,8 +80,29 @@
     </video>
 
     <div class="actions">
-      <a class="btn btn-vote" href="https://society.ecs.soton.ac.uk/elections" target="_blank" rel="noopener noreferrer">Vote for Indy</a>
-      <a class="btn btn-work" href="https://indigo.spot" target="_blank" rel="noopener noreferrer">View My Actual Work</a>
+      <a id="vote-button" class="btn btn-vote" href="https://society.ecs.soton.ac.uk/elections" target="_blank" rel="noopener noreferrer">Support Indy</a>
+<a class="btn btn-work" href="https://indigo.spot" target="_blank" rel="noopener noreferrer">View My Actual Work</a>
+
+<p id="voting-disclaimer">(voting opens thursday 19th)</p>
+
+<script>
+  (function() {
+    // March 19, 2026, at 20:30 (8:30 PM)
+    // parameters: (year, monthIndex, day, hours, minutes)
+    const electionDay = new Date(2026, 2, 19, 20, 30); 
+    let now = new Date();
+
+    if (now >= electionDay) {
+      const btn = document.getElementById('vote-button');
+      const disclaimer = document.getElementById('voting-disclaimer');
+      
+      if (btn) btn.textContent = 'Vote for Indy';
+      if (disclaimer) {
+          disclaimer.style.display = 'none';
+      }
+    }
+})();
+</script>
     </div>
   </main>
 </body>
